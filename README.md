@@ -12,3 +12,5 @@ rajout de photo dans l'entité Soins
 rajout de date dans l'entité Utilisateurs
 lancement du EasyAdmin 
 création du dashboard et des cruds 
+création de la sécurité de la partie admin 
+création d'un mot de passe encodé 
