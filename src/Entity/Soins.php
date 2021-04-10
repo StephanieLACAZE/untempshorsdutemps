@@ -39,6 +39,11 @@ class Soins
      */
     private $utilisateurs;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photo;
+
     public function __construct()
     {
         $this->utilisateurs = new ArrayCollection();
@@ -108,6 +113,18 @@ class Soins
         if ($this->utilisateurs->removeElement($utilisateur)) {
             $utilisateur->removeSoin($this);
         }
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): self
+    {
+        $this->photo = $photo;
 
         return $this;
     }

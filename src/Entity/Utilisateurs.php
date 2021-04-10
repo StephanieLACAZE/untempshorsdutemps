@@ -54,6 +54,11 @@ class Utilisateurs
      */
     private $soin;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
     public function __construct()
     {
         $this->soin = new ArrayCollection();
@@ -156,6 +161,18 @@ class Utilisateurs
     public function removeSoin(Soins $soin): self
     {
         $this->soin->removeElement($soin);
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
