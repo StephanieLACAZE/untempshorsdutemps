@@ -7,8 +7,8 @@ bundle installé: easyAdmin
 
 #lancer l'environnement de développement
 * github 
-# le 100421
+# le 10/04/21
 rajout de photo dans l'entité Soins
 rajout de date dans l'entité Utilisateurs
-lancement du easyAdmin 
+lancement du EasyAdmin 
 création du dashboard et des cruds 
