@@ -3,7 +3,10 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Soins;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+
 
 class SoinsCrudController extends AbstractCrudController
 {
