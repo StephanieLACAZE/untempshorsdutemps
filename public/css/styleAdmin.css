@@ -1,0 +1,15 @@
+/*Partie admin*/
+
+body{
+    background-color: #e3e7ed;
+}
+ #identification{
+    
+    text-align: center;
+    font-family: 'Rouge Script', sans-serif;
+ }
+ .password, .username{
+    font-size: 30px;
+ }
+
+

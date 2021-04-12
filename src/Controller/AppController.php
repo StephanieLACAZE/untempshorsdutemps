@@ -26,8 +26,11 @@ class AppController extends AbstractController
     #[Route('/Prestations/{id}', name: 'list_cares')]
     public function listCares(): Response
     {
-        return $this->render('app/list_cares.html.twig', 
-    );
+        $repository = $this->getDoctrine()->getRepository(Soins::class);
+        $soins=$repository->findBy([],['id'=>'DESC'],1);
+        return $this->render('app/list_cares.html.twig',[
+            'soins'=>$soins
+        ]);
     }
 
     #[Route('/Prestations/{id}', name: 'view_cares')]

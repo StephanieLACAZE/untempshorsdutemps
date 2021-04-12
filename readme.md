@@ -11,7 +11,14 @@ création des templates
 ## le 10/04/21
  installation d'easyAdmin
  création du dashboard
- création des crud 
+ création des crud
+ création de la sécurité de la partie admin
+ création d'un mot de passe encodé
+
+ ##le 11/04/21
+ mise en page de la partie front et back du projet
+ création des fichiers fonts.css, styleAdmin.css,styleApp.css
+ création d'un fichier baseAdmin.html.twig 
 
 
 

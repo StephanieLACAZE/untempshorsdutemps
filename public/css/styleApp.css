@@ -1,0 +1,16 @@
+.wrapper{
+    text-align: center;
+    font-family: 'Rouge Script', sans-serif;
+    font-size:60px;
+    color:#105bbb;
+ }
+ #menu{
+     text-align:center;
+     
+ }
+ .home,.about,.care{
+     margin-right: 30px;
+ }
+ 
+ 
+ 
