@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\App;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class AppController extends AbstractController
 {
@@ -16,10 +18,12 @@ class AppController extends AbstractController
         ]);
     }
 
-    #[Route('/À-propos', name: 'about')]
+    #[Route('/À-propos', name: 'a_propos')]
     public function about(): Response
     {
-        return $this->render('app/about.html.twig', 
+        return $this->render('a_propos/index.html.twig',
+        
+
     );
     }
 
