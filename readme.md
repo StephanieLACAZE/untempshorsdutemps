@@ -20,5 +20,9 @@ création des templates
  création des fichiers fonts.css, styleAdmin.css,styleApp.css
  création d'un fichier baseAdmin.html.twig 
 
+ ##le 18/04/21
+ création du formulaire
+ mise en page du dashboard back-end
+
 
 
