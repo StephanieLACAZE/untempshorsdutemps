@@ -27,11 +27,11 @@ class AppController extends AbstractController
     );
     }
 
-    #[Route('/Prestations/{id}', name: 'list_cares')]
+    #[Route('/Prestations', name: 'list_cares')]
     public function listCares(): Response
     {
         $repository = $this->getDoctrine()->getRepository(Soins::class);
-        $soins=$repository->findBy([],['id'=>'DESC'],1);
+        $soins=$repository->findAll();
         return $this->render('app/list_cares.html.twig',[
             'soins'=>$soins
         ]);
@@ -39,9 +39,12 @@ class AppController extends AbstractController
 
     #[Route('/Prestations/{id}', name: 'view_cares')]
     public function viewCares(): Response
-    {
-        return $this->render('app/view_cares.html.twig', 
-    );
+    {   
+        $repository = $this->getDoctrine()->getRepository(Soins::class);
+        $soins=$repository->findAll();
+        return $this->render('app/view_cares.html.twig', [
+            'soins'=>$soins
+        ]);
     }
 
     #[Route('/Contact', name: 'contact')]

@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Soins;
 use App\Entity\Utilisateurs;
+use App\Entity\Contact;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -18,7 +19,6 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        
         $routeBuilder = $this->get(CrudUrlGenerator::class)->build();
         $url = $routeBuilder->setController(SoinsCrudController::class)->generateUrl();
         return $this->redirect($url);
@@ -33,7 +33,8 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('Les Soins', 'fas fa-newspaper', Soins::class);
-        yield MenuItem::linkToCrud('Les Utilisateurs', 'fas fa-list', Utilisateurs::class);
+        yield MenuItem::linkToCrud('Les prestations', 'fas fa-newspaper', Soins::class);
+        yield MenuItem::linkToCrud('Les Utilisateurs', 'fas fa-user', Utilisateurs::class);
+        yield MenuItem::linkToCrud('Contact', 'fas fa-envelope-open', Contact::class);
     }
 }

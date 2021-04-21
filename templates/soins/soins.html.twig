@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les prestations
+{% endblock %}
+
+{% block body %}
+
+	Voici les différentes prestations proposées:
+
+	{% for soin in soins %}
+
+		<h3>{{soin.nom}}</h3>
+		<div>{{soin.description}}</div>
+		<div>{{soin.tarif}}
+			€</div>
+		<input type="submit" name="Réserver"/>
+	{% endfor %}
+
+{% endblock %}
