@@ -13,7 +13,13 @@
 		<div>{{soin.description}}</div>
 		<div>{{soin.tarif}}
 			€</div>
-		<input type="button" onclick="" value="Réservation"/>
+		<input id="btnRegister" type="button" value="Réservation"/>
 	{% endfor %}
-
+	{% block javascripts %}
+		<script>
+			document.getElementById("btnRegister").onclick = function () {
+location.href ="{{ path('connexion') }}"
+}
+		</script>
+	{% endblock %}
 {% endblock %}
