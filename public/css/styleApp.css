@@ -1,16 +1,290 @@
-.wrapper{
+html{
+    height:100%;
+}
+body {
+    min-height: 100%;
+    margin:0;
+    padding:0;
+    background-color: #FAF69E;
+}
+h1{
+    color: #f2994a;
     text-align: center;
-    font-family: 'Rouge Script',sans-serif;
+    margin-top:55px;
+    font-family: 'Monserrat',sans-serif;
+}
+body.homepage{
+    background: linear-gradient(#faf69e,#f0c1f0, #09cbf6);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*accueil */
+.wrapper{
+    
+    text-align: center;
+    font-family: 'Great Vibes',sans-serif;
     font-size:60px;
     color:#105bbb;
+    margin-top: 170px;
  }
  #menu{
      text-align:center;
+     margin-top: 30px;
+}
+#logo{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 200px;   
+}
+
+ .home,.about,.soins,.contact,.connexion{
+     padding-right: 50px;
+     text-decoration:none;
+     list-style-type:none;
+     font-family:'Montserrat',sans-serif;
+     color:mediumblue;
+ }
+ #formulaire{
+     margin-right : 55px;
+ }
+ .menu-footer {
+     position:relative;
+     top: 255px;
+    
+ }
+ /*À propos*/
+
+.propos {
+    display:flex;
+} 
+.titre{
+    text-align: center;
+    font-family:'Montserrat',sans-serif ;
+}
+.texte{
+    display: inline-block;
+    font-size: 20px;
+    font-family:'Montserrat',sans-serif ;
+    text-align: justify;
+}
+#portrait {
+    float: left;
+    margin-right: 20px;
+}
+/*prestations*/
+.titre-soin{
+    margin-top:55px;
+}
+.soin{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:35px;
+}
+.soin-nom,.soin-prix{
+    width:50%;
+}
+.soin,.description,.tarif,.btnreservation,h1{
+    font-family: 'Montserrat', sans-serif;
+}
+.soin .nom{
+    margin:0;
+}
+.soin-prix{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+    margin-right:50px;
+}
+.description{
+
+   font-size: 17px;  
+}
+.btnreservation{
+    border:3px solid;
+    border-image: linear-gradient(to right, #d76d77, #ffaf7b);
+    border-image-slice: 1;
+}
+
+.btnreservation {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 17px;
+    padding:5px;
+    margin-top:10px;
+    
+    
+} 
+ 
+/*contact*/
+ 
+#formulaire{
+    position: relative;
+    font-family: 'Monserrat',sans-serif;
+}
+
+ p{
+     text-align: center;
+     font-size:20px;
+ }
+ .contact .nom,.contact .prenom,.contact .telephone,.contact .email,.contact .message{
+     margin-top: 35px; 
+     margin-left: 25px;
+     display:flex;
+     flex-direction:column;
      
+}
+ .nom_field,.prenom_field,.telephone_field,.email_field{
+    border-radius:20px;
+    width:200px;
+    height:30px;
+
  }
- .home,.about,.care{
-     margin-right: 30px;
+ .message_field{
+     width:550px;
+     height:250px;
+     margin-top:20px;
+     border-radius:20px;
  }
+ .message{
+    position :absolute ;
+    top:0;
+    left: 500px;
+
+ }
+ .inscription{
+    display:block;
+    margin-top: 70px;
+    font-size: 18px;
+    font-family: 'Monserrat',sans-serif; 
+ }
+ #contact_Envoyer/*nom figurant dans l'inspecteur des éléments pour le bouton Envoyer*/{
+    margin-top:50px;
+    margin-left: 650px;
+    font-size: 17px;
+    border-radius:7px; 
+    
+ }
+
+ /*connexion*/
+
+ #connexion{
+     max-width:450px;
+     margin: 0 auto;
+     margin-top:120px;
+ }
+ .form-email{
+    display:flex;
+    flex-direction: column;
+    
+ }
+ .form .email,.form .motdepasse{
+     margin-bottom:15px;
+ }
+ .form-motdepasse{
+    margin-top:25px;
+    display:flex;
+    flex-direction: column;
+ }
+ #inputEmail,#inputPassword {
+     border-radius:10px;
+     height:20px;
+ }
+ .btn.btn-lg.btn-primary {
+     margin-top:35px;
+     margin-left:160px;
+     font-size:17px;
+     border-radius:7px;
+ }
+ .btnInscription, .btnPassword{
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 50px;
+    margin-top: 150px;    
+ }
+ .autreConnexion{
+     display:flex;
+     justify-content: center;
+     font-size:20px;
+ }
+ /*formulaire d'inscription*/
+  .inscription{
+      margin-top:150px;
+      font-size:25px;
+  }
+ #form-inscription{
+     display:flex;
+     flex-direction:column;
+     justify-content: space-between;
+     align-items: center;
+     margin-top:25px;     
+  }
+  .form-email,.form-password{
+      display: flex;
+      flex-direction: column;
+      margin-top:25px;
+  }
+  .form-terms,.btn{
+      margin-top:25px;
+      font-size:17px;
+  }
+  #registration_form_email,#registration_form_plainPassword{
+      margin-top: 15px;
+      border-radius:5px;
+  }
+  .btn{
+      border-radius:10px;
+  }
+  /*Compte Utilisateur*/
+
+  .inscription-utilisateur{
+      margin-left: 70px;
+  }
+  .required, #compte_utilisateur_envoyer{
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 25px;
+      font-family:'Montserrat',sans-serif;
+  }
+  #compte_utilisateur_nom, #compte_utilisateur_prenom, #compte_utilisateur_email,#compte_utilisateur_telephone,#compte_utilisateur_soin{
+     
+      width:350px;
+      height:50px;
+      border-radius: 15px;
+      border-image: linear-gradient(to right, #f2994a, #f2c94c);
+      border-image-slice: 1;
+
+  }
+  #compte_utilisateur_envoyer{
+      font-size:20px;
+      margin-left:100px;
+      border-image: linear-gradient(to right, #f2994a, #f2c94c);
+      border-image-slice: 1;
+  }
+
+
+  
+  
+ 
+
+
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
  
  
  

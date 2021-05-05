@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}inscription{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue sur votre compte utilisateur</h1>
+<div class="inscription-utilisateur">
+
+{{form_label(form.nom)}}
+{{form_widget(form.nom)}}
+
+{{form_label(form.prenom)}}
+{{form_widget(form.prenom)}}
+
+
+{{form_label(form.email)}}
+{{form_widget(form.email)}}
+
+
+{{form_label(form.telephone)}}
+{{form_widget(form.telephone)}}
+
+
+{{form_label(form.soin,'Prestations')}}
+{{form_widget(form.soin)}}
+
+
+{{form_label(form.envoyer)}}
+{{form_widget(form.envoyer)}}
+
+</div>
+
+{% endblock %}

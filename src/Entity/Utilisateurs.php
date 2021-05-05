@@ -42,11 +42,6 @@ class Utilisateurs
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $identifiant;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $motdepasse;
 
     /**
@@ -60,13 +55,15 @@ class Utilisateurs
     private $createdAt;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\Column(type="json")
      */
     private $roles = [];
 
     public function __construct()
     {
         $this->soin = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->roles = ['ROLE_USER'];
     }
 
     public function getId(): ?int
@@ -182,9 +179,13 @@ class Utilisateurs
         return $this;
     }
 
-    public function getRoles(): ?array
+    public function getRoles(): array
     {
-        return $this->roles;
+        $roles= $this->roles;
+        $roles[]= 'ROLE_USER';
+
+        return array_unique($roles);
+
     }
 
     public function setRoles(array $roles): self
