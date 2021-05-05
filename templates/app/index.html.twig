@@ -2,12 +2,26 @@
 
 {% block title %}Un temps hors du temps...
 {% endblock %}
+{% block bodyClass %}
+		class="homepage"
+{% endblock %}
+{% block stylesheets %}
+	<style>
 
+		 body {
+			
+			/*min-height:97.5vh;*/
+		}
+		
+	</style>
+{% endblock %}
 {% block body %}
 
 
 	<div class="example-wrapper">
 		<h1 class="wrapper">Un temps hors du temps...</h1>
 
+	</div>
 
-	{% endblock %}
+{{include('app/_footer.html.twig')}}
+{% endblock %}

@@ -4,12 +4,36 @@
 {% endblock %}
 
 {% block body %}
+	<div class='contact'>
+		<h1>Contactez-moi
+		</h1>
+		<div id='formulaire'>
+		{{form_start(form)}}
+			<div class="nom">
+			{{form_label(form.nom)}}
+			{{form_widget(form.nom,{'attr':{'class':'nom_field'}})}}
+			</div>
+			<div class="prenom">
+			{{form_label(form.prenom)}}
+			{{form_widget(form.prenom,{'attr':{'class':'prenom_field'}})}}
+			</div>
+			<div class="telephone">
+			{{form_label(form.telephone)}}
+			{{form_widget(form.telephone,{'attr':{'class':'telephone_field'}})}}
+			</div>
+			<div class="email">
+			{{form_label(form.email)}}
+			{{form_widget(form.email,{'attr':{'class':'email_field'}})}}
+			</div>
+			<div class="message">
+			{{form_label(form.message)}}
+			{{form_widget(form.message,{'attr':{'class':'message_field'}})}}
+			</div>
+			{{form_end(form)}}
+			</div>
 
-	<h1>Contactez-moi
-	</h1>
-	<style></style>
-	{{form(form)}}
-
-
-		<a class="contact" href="{{path('app_register')}}">Inscription</a>
+			<div class='inscription'>
+			<p>Si vous souhaitez vous inscrire c'est ici : <a href="{{path('app_register')}}">Inscription</a></p>
+			</div>
+		</div>
 	{% endblock %}

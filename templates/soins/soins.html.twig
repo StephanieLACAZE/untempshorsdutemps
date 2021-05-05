@@ -5,21 +5,30 @@
 
 {% block body %}
 
-	Voici les différentes prestations proposées:
+	<h1 class="titre-soin">Voici les différentes prestations proposées:</h1>
+
 
 	{% for soin in soins %}
-
-		<h3>{{soin.nom}}</h3>
-		<div>{{soin.description}}</div>
-		<div>{{soin.tarif}}
+	<div class="soin">
+	<div class="soin-nom">
+		<h4 class ="nom">{{soin.nom}}</h4>
+		<div class="description">{{soin.description}}</div>
+	</div>
+	<div class="soin-prix">
+		<div class="tarif">{{soin.tarif}}
 			€</div>
-		<input id="btnRegister" type="button" value="Réservation"/>
-	{% endfor %}
-	{% block javascripts %}
-		<script>
-			document.getElementById("btnRegister").onclick = function () {
-location.href ="{{ path('connexion') }}"
-}
-		</script>
-	{% endblock %}
+		<a class="btnreservation" href="{{path('connexion')}}">réservation</a>
+	</div>
+	</div>
+{% endfor %}
+		{% block javascripts %}
+
+{% endblock %}
+			<style>
+			body{
+				position:relative;
+			}
+			</style>
+		
+	
 {% endblock %}
