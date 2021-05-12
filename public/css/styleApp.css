@@ -10,12 +10,13 @@ body {
 h1{
     color: #f2994a;
     text-align: center;
-    margin-top:55px;
+    margin-top:50px;
     font-family: 'Monserrat',sans-serif;
 }
 body.homepage{
-    background: linear-gradient(#faf69e,#f0c1f0, #09cbf6);
-    background-size: cover;
+    background-image: url("../img/bulle-jaune.png");
+    /*background: linear-gradient(#faf69e,#f0c1f0, #09cbf6);*/
+    background-position:center ;
     background-repeat: no-repeat;
 }
 /*accueil */
@@ -25,7 +26,7 @@ body.homepage{
     font-family: 'Great Vibes',sans-serif;
     font-size:60px;
     color:#105bbb;
-    margin-top: 170px;
+    margin-top: 200px;
  }
  #menu{
      text-align:center;
@@ -43,14 +44,14 @@ body.homepage{
      text-decoration:none;
      list-style-type:none;
      font-family:'Montserrat',sans-serif;
-     color:mediumblue;
+     color:#105bbb;
  }
  #formulaire{
      margin-right : 55px;
  }
  .menu-footer {
      position:relative;
-     top: 255px;
+     top: 220px;
     
  }
  /*À propos*/
@@ -70,7 +71,8 @@ body.homepage{
 }
 #portrait {
     float: left;
-    margin-right: 20px;
+    margin-right:20px;
+    
 }
 /*prestations*/
 .titre-soin{
@@ -130,7 +132,7 @@ body.homepage{
      font-size:20px;
  }
  .contact .nom,.contact .prenom,.contact .telephone,.contact .email,.contact .message{
-     margin-top: 35px; 
+     margin-top: 15px; 
      margin-left: 25px;
      display:flex;
      flex-direction:column;
@@ -145,7 +147,7 @@ body.homepage{
  .message_field{
      width:550px;
      height:250px;
-     margin-top:20px;
+     margin-top:15px;
      border-radius:20px;
  }
  .message{
@@ -155,14 +157,15 @@ body.homepage{
 
  }
  .inscription{
-    display:block;
-    margin-top: 70px;
+    display:inline block;
+    margin-top:5px;
+    margin-left:950px;
     font-size: 18px;
     font-family: 'Monserrat',sans-serif; 
  }
  #contact_Envoyer/*nom figurant dans l'inspecteur des éléments pour le bouton Envoyer*/{
-    margin-top:50px;
-    margin-left: 650px;
+    margin-top:15px;
+    margin-left: 750px;
     font-size: 17px;
     border-radius:7px; 
     
@@ -181,7 +184,7 @@ body.homepage{
     
  }
  .form .email,.form .motdepasse{
-     margin-bottom:15px;
+     margin-bottom:10px;
  }
  .form-motdepasse{
     margin-top:25px;
@@ -190,7 +193,8 @@ body.homepage{
  }
  #inputEmail,#inputPassword {
      border-radius:10px;
-     height:20px;
+     height:35px;
+    
  }
  .btn.btn-lg.btn-primary {
      margin-top:35px;
@@ -201,8 +205,8 @@ body.homepage{
  .btnInscription, .btnPassword{
     list-style-type: none;
     text-decoration: none;
-    margin-right: 50px;
-    margin-top: 150px;    
+    margin-right: 60px;
+    margin-top: 120px;    
  }
  .autreConnexion{
      display:flex;
@@ -210,8 +214,8 @@ body.homepage{
      font-size:20px;
  }
  /*formulaire d'inscription*/
-  .inscription{
-      margin-top:150px;
+  .enregistrement{
+      margin-top:120px;
       font-size:25px;
   }
  #form-inscription{
@@ -219,7 +223,7 @@ body.homepage{
      flex-direction:column;
      justify-content: space-between;
      align-items: center;
-     margin-top:25px;     
+     margin-top:15px;     
   }
   .form-email,.form-password{
       display: flex;
@@ -227,12 +231,13 @@ body.homepage{
       margin-top:25px;
   }
   .form-terms,.btn{
-      margin-top:25px;
+      margin-top:20px;
       font-size:17px;
   }
   #registration_form_email,#registration_form_plainPassword{
       margin-top: 15px;
       border-radius:5px;
+      height:35px;
   }
   .btn{
       border-radius:10px;
@@ -265,6 +270,11 @@ body.homepage{
       border-image: linear-gradient(to right, #f2994a, #f2c94c);
       border-image-slice: 1;
   }
+  .btnDeconnexion{
+      list-style-type: none;
+      text-decoration: none;
+  }
+  
 
 
   
